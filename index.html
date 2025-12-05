@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Minimal reset to ensure game UI displays centered */
+        body, html { height: 100%; margin: 0; font-family: Arial, sans-serif; background: #000; }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="1000" height="600"></canvas>
+        
+        <div class="game-ui">
+            <h2 class="title">SPACE SHOOTER</h2>
+            <div class="score">Skor: <span id="score">0</span></div>
+            <div class="level">Level: <span id="level">1</span></div>
+            <div class="health">
+                <span>Kesehatan:</span>
+                <div class="health-bar">
+                    <div class="health-fill" id="healthFill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- controls moved below the game container so they are outside the canvas area -->
+        
+        <div class="booster-notice" id="boosterNotice">
+            <strong>Booster Aktif!</strong>
+            <p id="boosterMessage"></p>
+        </div>
+        
+        <div class="game-over" id="gameOverScreen">
+            <h1>GAME OVER</h1>
+            <p>Skor Akhir: <span id="finalScore">0</span></p>
+            <button class="restart-btn" id="restartBtn">Main Lagi</button>
+        </div>
+        
+        <div class="stars" id="stars"></div>
+    </div>
+
+    <!-- Controls moved outside the canvas container so they appear below the game -->
+    <div class="controls">
+        <p>Kontrol:</p>
+        <p><span class="key">W</span> <span class="key">A</span> <span class="key">S</span> <span class="key">D</span> - Bergerak</p>
+        <p><span class="key">SPACE</span> - Tembak (tahan untuk menembak terus)</p>
+    </div>
+
+    <!-- Load the game logic from sistem.js (was incorrectly referenced as game.js) -->
+    <script src="sistem.js"></script>
+</body>
+</html>
