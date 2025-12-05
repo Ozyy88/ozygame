@@ -6,7 +6,6 @@
     <title>Space Shooter Game</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Minimal reset to ensure game UI displays centered */
         body, html { height: 100%; margin: 0; font-family: Arial, sans-serif; background: #000; }
     </style>
 </head>
@@ -26,8 +25,7 @@
             </div>
         </div>
         
-        <!-- controls moved below the game container so they are outside the canvas area -->
-        
+    
         <div class="booster-notice" id="boosterNotice">
             <strong>Booster Aktif!</strong>
             <p id="boosterMessage"></p>
@@ -42,14 +40,15 @@
         <div class="stars" id="stars"></div>
     </div>
 
-    <!-- Controls moved outside the canvas container so they appear below the game -->
+
     <div class="controls">
         <p>Kontrol:</p>
         <p><span class="key">W</span> <span class="key">A</span> <span class="key">S</span> <span class="key">D</span> - Bergerak</p>
         <p><span class="key">SPACE</span> - Tembak (tahan untuk menembak terus)</p>
     </div>
 
-    <!-- Load the game logic from sistem.js (was incorrectly referenced as game.js) -->
+    
     <script src="sistem.js"></script>
 </body>
+
 </html>
